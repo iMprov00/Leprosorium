@@ -53,6 +53,6 @@ post '/new' do
 
 	@db.execute "insert into Posts (content, ctreated_date) values (?, datetime())", [content]
 
-	erb "Вы ввели #{content}"
+	erb :index
 
 end
