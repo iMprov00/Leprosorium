@@ -44,6 +44,11 @@ post '/new' do
 
 	content = params[:content]
 
+	if content .length <= 0
+		@error = "Введите текст"
+		return erb :new
+	end
+
 	erb "Вы ввели #{content}"
 
 end
