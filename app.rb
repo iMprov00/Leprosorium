@@ -56,3 +56,11 @@ post '/new' do
 	redirect to '/'
 
 end
+
+get '/post/:id' do 
+
+	id = params[:id]
+
+	erb "Отображение комментария №#{id}"
+
+end
