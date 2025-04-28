@@ -14,9 +14,17 @@ get '/main' do
 
 end
 
-get '/new_post' do 
+get '/new' do 
 
 
 	erb :new_post
+
+end
+
+post '/new' do
+
+	content = params[:content]
+
+	erb "Вы ввели #{content}"
 
 end
